@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repositorio Documental</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos CSS -->
+</head>
+<body>
+  <header>
+    <h1>Repositorio Documental</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Buscar</a></li>
+        <li><a href="#">Filtrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Buscar Documentos</h2>
+      <!--formulario-->
+      <form>
+        <!--label: etiqueta-->
+        <label for="search">Buscar por Título o Palabras Clave:</label>
+        <!--input: entrada (tipo texto) y seteador de instruccion-->
+        <input type="text" id="search" placeholder="Ingrese su búsqueda">
+
+        <!--boton con acción de envio-->
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Filtrar Documentos</h2>
+      <form>
+        <label for="category">Categoría:</label>
+        <!--escoger opcion a seterar del combo y opciones-->
+        <select id="category">
+          <option value="category1">Categoría 1</option>
+          <option value="category2">Categoría 2</option>
+          <option value="category3">Categoría 3</option>
+        </select>
+
+        <label for="date">Fecha:</label>
+        <!--input: entrada (tipo fecha)-->
+        <input type="date" id="date">
+
+        <button type="submit">Filtrar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Resultados de Búsqueda</h2>
+      <div id="search-results">
+        <div class="document">
+          <h3>Documento 1</h3>
+          <p>Categoría: Categoría 1</p>
+          <p>Fecha: 2023-05-16</p>
+          <a href="documento1.pdf">Ver Documento</a>
+        </div>
+        <div class="document">
+          <h3>Documento 2</h3>
+          <p>Categoría: Categoría 2</p>
+          <p>Fecha: 2023-05-15</p>
+          <a href="documento2.pdf">Ver Documento</a>
+        </div>
+        <!-- Agregar más documentos según sea necesario -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Derechos de Autor &copy; 2023 | Repositorio Documental</p>
+  </footer>
+</body>
+</html>

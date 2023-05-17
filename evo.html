@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Videos en Línea</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos CSS -->
+</head>
+<body>
+  <header>
+    <h1>Editor de Videos en Línea</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Cargar Video</a></li>
+        <li><a href="#">Recortar</a></li>
+        <li><a href="#">Agregar Efectos</a></li>
+        <li><a href="#">Guardar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Cargar Video</h2>
+      <form>
+        <label for="video-file">Selecciona un video:</label>
+        <!--input: entrada (tipo adjunto) -->
+        <input type="file" id="video-file">
+
+        <button type="submit">Cargar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Recortar</h2>
+      <!-- Contenedor de vista previa del video (se genera con JavaScript) -->
+      <div id="video-preview"></div> 
+      <form>
+        <label for="start-time">Tiempo de inicio:</label>
+        <input type="text" id="start-time">
+
+        <label for="end-time">Tiempo de fin:</label>
+        <input type="text" id="end-time">
+
+        <button type="submit">Recortar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Agregar Efectos</h2>
+      <!-- Contenedor de vista previa del efecto (se genera con JavaScript) -->
+      <div id="effect-preview"></div> 
+      <form>
+        <label for="effect-type">Tipo de efecto:</label>
+        <!-- Combo de efectos -->
+        <select id="effect-type">
+          <option value="blur">Desenfoque</option>
+          <option value="sepia">Sepia</option>
+          <option value="grayscale">Escala de Grises</option>
+          <!-- Agregar más opciones de efectos según sea necesario -->
+        </select>
+
+        <button type="submit">Aplicar Efecto</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Guardar</h2>
+      <p>Una vez que hayas terminado de editar tu video, puedes guardarlo en tu dispositivo o compartirlo en tus redes sociales.</p>
+      <!-- Se agrega acción en función de tipo de guardado -->
+      <button id="save-button">Guardar Video</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Derechos de Autor &copy; 2023 | Editor de Videos en Línea</p>
+  </footer>
+
+  <!-- Archivo de script para la funcionalidad del editor de videos -->
+  <script src="video-editor.js"></script> 
+</body>
+</html>
